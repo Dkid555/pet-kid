@@ -13,7 +13,7 @@ def Matrix(m, n):
     return Mat[m - 1][n - 1]
 
 
-#Matrix(20, 20)
+# Matrix(20, 20)
 
 """OR"""
 
@@ -27,8 +27,8 @@ def Ones(m, n):
     return Mat[n - 1]
 
 
-#Ones(5, 5)
+# Ones(5, 5)
 
 if __name__ == "__main__":
-    print(Ones(5,5))
-    print(Matrix(5,5))
+    print(Ones(5, 5))
+    print(Matrix(5, 5))
