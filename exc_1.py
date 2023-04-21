@@ -585,3 +585,26 @@ def maxtwobuysell(arr, size):
 
 
 maxtwobuysell(prices, len(prices))
+
+
+"""ListNode Del duplicates"""
+
+
+def deleteDuplicates( head):
+    """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+    if not head:
+        return head
+    tail = head
+    while tail.next:
+        current = tail.next
+        if current.val == tail.val:
+            tail.next = current.next
+        else:
+            tail = current
+    return head
+
+ln=ListNode; l=ln(1, ln(1, ln(2, ln(3, ln(3)))))  
+deleteDuplicates(l)  
