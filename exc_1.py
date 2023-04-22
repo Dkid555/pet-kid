@@ -277,7 +277,7 @@ else:
     while i < len(lst_int):
              
 
-        if (i < len(lst_int) - 1) and lst_int[i] < lst_int[i+1]:
+        if (i < len(lst_int) - 1) and lst_int[i] < lst_int[i + 1]:
 
             sm = sm - lst_int[i]
         else:
@@ -403,7 +403,7 @@ def Two_sum(lst, target):
                  List.append(i)
                  List.append(right)
                  return List
-            right -= 1     
+            right -= 1
 
     return List
 
@@ -500,12 +500,12 @@ def Matrix(m, n):
     return Mat[m-1][n-1]
 
 
-Matrix(20,20)    
+Matrix(20,20)
 
 
 """OR"""
 def Ones(m,n):
-    
+
     Mat = [1] * n
     #Mat = np.ones((0,n),int)
     for i in range (1,m-1):
