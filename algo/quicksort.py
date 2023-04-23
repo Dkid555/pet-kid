@@ -18,8 +18,7 @@ def quick(arr, low, high):
         quick(arr, pi + 1, high)
 
 
-
 if __name__ == '__main__':
-    arr = [10, 7, 8, 9, 1, 5, 5, 7]
-    quick(arr, 0, len(arr) - 1)
-    print(arr)
+    lst = [12, 34, 54, 2, 3, -1, 200, 500, -1000, 5000]
+    quick(lst, 0, len(lst) - 1)
+    print(lst)
