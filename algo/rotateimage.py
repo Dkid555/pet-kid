@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def Matrixrotate(matrix):
     n = len(matrix)
     i = 0
@@ -18,11 +19,9 @@ def Matrixrotate(matrix):
         matrix[k] = matrix[k][::-1]
 
 
-
-
 if __name__ == "__main__":
-    matrix = [[1,2,3],[4,5,6],[7,8,9]]
-   # a = np.empty(len(matrix))
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    # a = np.empty(len(matrix))
     a = np.array(matrix[::-1])
     print(a)
     a = np.rot90(a)

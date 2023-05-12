@@ -7,10 +7,9 @@
 
 """
 
-
-if __name__ =="__main__":
+if __name__ == "__main__":
     digit = int(input())
     if digit == 0:
         print(digit)
     else:
-        print("it goes till: ", (digit - 1)%9 + 1)
+        print("it goes till: ", (digit - 1) % 9 + 1)

@@ -14,6 +14,7 @@ def lengthOfLongestSubstring(s: str):
     max_s = max(max_s, len(d))
     return max_s
 
+
 if __name__ == "__main__":
     s = input()
     print(lengthOfLongestSubstring(s))

@@ -15,22 +15,27 @@ Input: x = 120
 Output: 21
 """
 
+
 def reverse(x):
-    max = 2**31 - 1
-    min = -2**31
+    max = 2 ** 31 - 1
+    min = -2 ** 31
 
     x_str = str(x) if x >= 0 else str(x)[1:]
-    x_reverse = int(x_str[::-1] if x >= 0 else '-'+  x_str[::-1])
+    x_reverse = int(x_str[::-1] if x >= 0 else '-' + x_str[::-1])
     type(x_reverse)
     if x_reverse in range(min, max + 1):
         return x_reverse
     return 0
 
+
 """OR"""
+
+
 def reverse1(x):
     rever = int(str(abs(x))[::-1])
     return (rever if x >= 0 else -rever) if rever.bit_length() < 32 else 0
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     x = int(input())
     print(reverse(x))

@@ -1,39 +1,46 @@
-#from binarytree import tree, bst, heap
+# from binarytree import tree, bst, heap
 class tree:
-    def __init__(self,val = None):
+    def __init__(self, val=None):
         self.val = val
         self.left = None
         self.right = None
+
     """def display_root(self):
         temp = None
         while self != None"""
+
+
 s = 0
 
 
-def calculatemaxpath(root: tree): #FROOM ROOT
+def calculatemaxpath(root: tree):  # FROOM ROOT
     if root == None:
         return 0
-    left  = calculatemaxpath(root.left)
+    left = calculatemaxpath(root.left)
     right = calculatemaxpath(root.right)
-    return max(left,right) + root.val
+    return max(left, right) + root.val
 
-#sum = 0
-def maxpath(root: tree): #from every root
+
+# sum = 0
+def maxpath(root: tree):  # from every root
     g = []
     sum = 0
     helper(root, sum, g)
-    #sum = helper(root, sum, g)
-    #return sum
-    return(max(g))
-    #return sum
+    # sum = helper(root, sum, g)
+    # return sum
+    return (max(g))
+    # return sum
+
+
 def helper(root: tree, sum, g):
     if root == None:
         return sum
-    left = max(helper(root.left,sum, g), 0)
-    right = max(helper(root.right,sum, g), 0)
+    left = max(helper(root.left, sum, g), 0)
+    right = max(helper(root.right, sum, g), 0)
     sum = max(sum, max(left, right) + root.val)
     g.append(sum)
     return max(left, right) + root.val
+
 
 if __name__ == "__main__":
     """root = tree(1)
@@ -56,6 +63,6 @@ if __name__ == "__main__":
 
     print(maxpath(root))
     print(calculatemaxpath(root))
-    #print(sum)
-    #maxpath(g,root)
-    #print(g)
+    # print(sum)
+    # maxpath(g,root)
+    # print(g)
